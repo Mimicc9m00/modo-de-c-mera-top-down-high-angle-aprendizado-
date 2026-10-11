@@ -1,4 +1,3 @@
-[Uploading README.md…]()
 # Exploration e cozinha
 
 Um projeto de jogo 3D desenvolvido na **Godot Engine 4.7.2**, focado em exploração, coleta de recursos e culinária.
