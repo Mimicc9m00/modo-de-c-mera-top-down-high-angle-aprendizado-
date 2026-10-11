@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c0st76woohyy4"]
+
+[ext_resource type="Script" uid="uid://dfib5nopy6b0w" path="res://madeiradropada.gd" id="1_8rro8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
+albedo_color = Color(0.36866656, 0.18621597, 0.045022085, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+material = SubResource("StandardMaterial3D_yf5fn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[node name="madeira" type="Node3D" unique_id=40425457]
+transform = Transform3D(1.43, 0, 0, 0, 1.5600001, 0, 0, 0, 1.4, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1591791579]
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=164715069]
+script = ExtResource("1_8rro8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=6363898]
+transform = Transform3D(1.8717753, 0, 0, 0, 2.4798508, 0, 0, 0, 2.1787934, 0, 0, 0)
+shape = SubResource("BoxShape3D_g4v7s")

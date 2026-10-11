@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://bd8h124ib2rhr"]
+
+[ext_resource type="PackedScene" uid="uid://v45jy4ksta6n" path="res://trees/tree_animate.glb" id="1_r57si"]
+[ext_resource type="Script" uid="uid://e06d6eno3cfc" path="res://area_3d.gd" id="2_dhub7"]
+[ext_resource type="PackedScene" uid="uid://c0st76woohyy4" path="res://madeira.tscn" id="3_2oyq3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+size = Vector3(1, 1, 1.9678955)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r57si"]
+
+[node name="Sketchfab_Scene" unique_id=241496483 instance=ExtResource("1_r57si")]
+
+[node name="mesh_1" parent="Sketchfab_model/root/GLTF_SceneRootNode/Leaf_6_3" parent_id_path=PackedInt32Array(852421815) index="0" unique_id=1113582572]
+blend_shapes/morph_0 = 0.7049815
+blend_shapes/morph_1 = 0.5
+blend_shapes/morph_3 = 0.5
+blend_shapes/morph_4 = 0.25
+
+[node name="mesh_12" parent="Sketchfab_model/root/GLTF_SceneRootNode/Leaf_6_3" parent_id_path=PackedInt32Array(852421815) index="1" unique_id=545943054]
+blend_shapes/morph_0 = 0.7049815
+blend_shapes/morph_1 = 0.5
+blend_shapes/morph_3 = 0.5
+blend_shapes/morph_4 = 0.25
+
+[node name="AnimationPlayer" parent="." index="1" unique_id=1028091030]
+autoplay = &"MorphBake"
+
+[node name="Area3D" type="Area3D" parent="." index="2" unique_id=2142892717]
+collision_layer = 2
+script = ExtResource("2_dhub7")
+cena_madeira = ExtResource("3_2oyq3")
+altura_drop = 1.5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0" unique_id=956762332]
+transform = Transform3D(10.588684, 0, 0, 0, 34.085, 0, 0, 0, 7.8418326, -146.85133, 16.343563, 0.6201925)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=94429219 groups=["Tree"]]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1536382498 groups=["Tree"]]
+transform = Transform3D(38.796154, 0, 0, 0, 21.63493, 0, 0, 0, -49.727238, -149.05435, 28.916628, 0)
+shape = SubResource("BoxShape3D_r57si")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=2069709253 groups=["Tree"]]
+transform = Transform3D(22.855606, 0, 0, 0, 21.63493, 0, 0, 0, -26.809519, -67.93817, 27.699554, 0)
+shape = SubResource("BoxShape3D_r57si")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=290972740 groups=["Tree"]]
+transform = Transform3D(33.627296, 0, 0, 0, 21.63493, 0, 0, 0, -33.24303, 0.17385864, 26.63021, 0)
+shape = SubResource("BoxShape3D_r57si")
+
+[node name="Area3D2" type="Area3D" parent="." index="4" unique_id=260468283]
+script = ExtResource("2_dhub7")
+cena_madeira = ExtResource("3_2oyq3")
+altura_drop = 1.5
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Area3D2" index="0" unique_id=230212017]
+transform = Transform3D(10.588684, 0, 0, 0, 34.085, 0, 0, 0, 7.8418326, -68.87705, 16.343563, 0.6201925)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="Area3D3" type="Area3D" parent="." index="5" unique_id=318034989]
+script = ExtResource("2_dhub7")
+cena_madeira = ExtResource("3_2oyq3")
+altura_drop = 1.5
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Area3D3" index="0" unique_id=1055321756]
+transform = Transform3D(10.588684, 0, 0, 0, 34.085, 0, 0, 0, 7.8418326, -0.008255005, 16.343563, 0.6201925)
+shape = SubResource("BoxShape3D_g4v7s")

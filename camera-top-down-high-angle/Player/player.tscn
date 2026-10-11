@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dxu5iasw63hs8"]
+
+[ext_resource type="PackedScene" uid="uid://8w0m6rw1i6oc" path="res://Player/minecraft_player_wide_rigged_with_outer_layer.glb" id="1_4flbx"]
+
+[node name="Player" unique_id=396772818 instance=ExtResource("1_4flbx")]
+
+[node name="Skeleton3D" parent="Sketchfab_model/Steve_fbx/Object_2/RootNode/Skeleton/Object_17" parent_id_path=PackedInt32Array(619001976) index="0" unique_id=1853761267]
+bones/5/rotation = Quaternion(8.244174e-08, 6.686569e-08, 0.99999285, 0.0037878049)
+bones/7/rotation = Quaternion(-8.244174e-08, 6.686569e-08, 0.99999285, -0.0037878049)
+bones/9/rotation = Quaternion(0.7070786, -0.006335314, -0.70707834, -0.0063353153)
+bones/11/rotation = Quaternion(0.7070786, 0.006335314, 0.70707834, -0.0063353153)

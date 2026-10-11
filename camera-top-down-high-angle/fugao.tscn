@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bh5cbvyc4whx5"]
+
+[ext_resource type="Script" uid="uid://bg4ioha33yc8l" path="res://fugao.gd" id="1_35rf3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yf5fn"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g4v7s"]
+material = SubResource("StandardMaterial3D_yf5fn")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4v7s"]
+
+[node name="fugao" type="Area3D" unique_id=1254601165]
+script = ExtResource("1_35rf3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=351304006]
+mesh = SubResource("BoxMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=436199732]
+transform = Transform3D(1.4850562, 0, 0, 0, 1, 0, 0, 0, 1.7132914, 0, 0, 0)
+shape = SubResource("BoxShape3D_g4v7s")
+
+[node name="indicadores" type="Node3D" parent="." unique_id=538980083]

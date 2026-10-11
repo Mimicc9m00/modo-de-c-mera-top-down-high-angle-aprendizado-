@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c4ddtx47h6bua"]
+
+[ext_resource type="PackedScene" uid="uid://dxu5iasw63hs8" path="res://Player/player.tscn" id="1_q3qun"]
+[ext_resource type="Script" uid="uid://v7imo7e66bet" path="res://Player/player_global.gd" id="1_q71r2"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_g4v7s"]
+
+[node name="Player" type="CharacterBody3D" unique_id=41907364 groups=["player"]]
+script = ExtResource("1_q71r2")
+velocidade = 8.0
+
+[node name="Player" parent="." unique_id=396772818 instance=ExtResource("1_q3qun")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1794313266]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_g4v7s")
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=121812580]
+transform = Transform3D(1, 0, 0, 0, 0.7071067, 0.7071067, 0, -0.7071067, 0.7071067, 0, 45, 45)
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=877204176]
+transform = Transform3D(1, 0, 0, 0, 1.0000002, 0, 0, 0, 1.0000002, 0, 0, 0)
+current = true
+fov = 60.0
+far = 1000.0
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraRig" unique_id=181431999]
+collision_mask = 3
